@@ -11,11 +11,12 @@ class Player
     @points = points
   end
 
-  def attack(player)
-    player.damage
-  end
-
+  # def attack(player)
+  #   player.damage
+  # end
+  
   def damage
     @points -= DAMAGE
   end
+
 end

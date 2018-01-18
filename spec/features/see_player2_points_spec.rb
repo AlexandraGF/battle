@@ -7,6 +7,6 @@ feature 'See the points' do
     # fill_in :player_2, with: 'David'
     # click_button 'Submit'
     sign_in_and_play
-    expect(page).to have_content 'David: 20 Hit Points'
+    expect(page).to have_content 'David: 100 Hit Points'
   end
 end

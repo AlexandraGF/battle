@@ -10,4 +10,10 @@ feature 'Player attack' do
     click_on 'Attack'
     expect(page).to have_content 'Alexa attacked David.'
   end
+
+  scenario 'get confirmation of hit points change' do
+    sign_in_and_play
+    click_on 'Attack'
+    expect(page).to have_content 'David has now 90 Hit Points.'
+  end
 end

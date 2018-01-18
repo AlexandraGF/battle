@@ -10,8 +10,8 @@ describe Player do
     expect(player.points).to eq(Player::POINTS)
   end
 
-  it 'reduce Player 2 HP when attack' do
-    player2 = Player.new("Ana")
-    expect{player.attack(player2)}.to change{player2.points}.from(100).to(90)
-  end
+  # it 'reduce Player 2 HP when attack' do
+  #   player2 = Player.new("Ana")
+  #   expect{player.attack(player2)}.to change{player2.points}.from(100).to(90)
+  # end
 end
