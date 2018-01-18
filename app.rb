@@ -25,7 +25,7 @@ enable :sessions
   get '/attack' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
-    Game.new.attack($player_2)
+    Game.new($player_1, $player_2).attack($player_2)
 
     erb :attack
   end
