@@ -30,10 +30,10 @@ enable :sessions
   end
 
   get '/redirectplay' do
-    if $game.player2.points != Player::DAMAGE
-    redirect '/play'
-  else
+    if $game.player1.points < 30 || $game.player2.points  < 30
     erb :game_lost
+  else
+    redirect '/play'
   end
   end
 

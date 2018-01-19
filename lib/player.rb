@@ -6,6 +6,7 @@ class Player
   POINTS = 100
   DAMAGE = 10
 
+
   def initialize(name, points = POINTS )
     @name = name
     @points = points
@@ -14,9 +15,9 @@ class Player
   # def attack(player)
   #   player.damage
   # end
-  
+
   def damage
-    @points -= DAMAGE
+    @points -= [10, 20, 30].sample
   end
 
 end
