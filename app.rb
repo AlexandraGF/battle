@@ -11,26 +11,31 @@ enable :sessions
   end
 
   get '/play' do
+    @game = $game
     erb :play
   end
 
   post '/names' do
     $game = Game.new((Player.new(params[:player_1])), (Player.new(params[:player_2])))
+    @game = $game
     redirect '/play'
   end
 
   get '/attack' do
-    $game.attack($game.player2)
+    @game = $game
+    @game.attack(@game.player2)
     erb :attack
   end
 
   get '/attack2' do
-    $game.attack($game.player1)
+    @game = $game
+    @game.attack(@game.player1)
     erb :attack2
   end
 
   get '/redirectplay' do
-    if $game.player1.points < 30 || $game.player2.points  < 30
+    @game = $game
+    if @game.player1.points < 30 || @game.player2.points  < 30
     erb :game_lost
   else
     redirect '/play'

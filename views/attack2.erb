@@ -1,8 +1,8 @@
-<h2><%= $game.player2.name %> attacked <%= $game.player1.name%>.</h2>
+<h2><%= @game.player2.name %> attacked <%= @game.player1.name%>.</h2>
 
-<h3><%= $game.player1.name %> has now <%= $game.player1.points %> Hit Points.</h3>
+<h3><%= @game.player1.name %> has now <%= @game.player1.points %> Hit Points.</h3>
 
-<h4><%= $game.player1.name %>'s turn</h4>
+<h4><%= @game.player1.name %>'s turn</h4>
 
 <form action="/redirectplay" method="get">
   <input type='submit' value='Attack'>
