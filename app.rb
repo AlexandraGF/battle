@@ -24,6 +24,19 @@ enable :sessions
     erb :attack
   end
 
+  get '/attack2' do
+    $game.attack($game.player1)
+    erb :attack2
+  end
+
+  get '/redirectplay' do
+    if $game.player2.points != Player::DAMAGE
+    redirect '/play'
+  else
+    erb :game_lost
+  end
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

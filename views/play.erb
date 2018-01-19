@@ -1,5 +1,10 @@
-<%= $game.player1.name %> vs. <%= $game.player2.name %>
+<h2><%= $game.player1.name %> vs. <%= $game.player2.name %></h2>
 
-<%= $game.player2.name %>: <%= $game.player2.points %> Hit Points.
+<h3><%= $game.player2.name %>: <%= $game.player2.points %> Hit Points.</h3>
 
-<a href='/attack'>Attack</a>
+<!-- <a href='/attack'>Attack</a> -->
+<h4>Here comes the attack :) </h4>
+
+<form action="/attack" method="get">
+  <input type='submit' value='Attack'>
+</form>
